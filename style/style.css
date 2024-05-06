@@ -1,0 +1,117 @@
+:root{
+    --bg-clr:whitesmoke ;
+    --bg-clr2:rgba(178, 241, 222, 0.958);
+    --bg-clr3: rgba(78, 241, 170, 0.986);
+    --box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --txt-clr: black;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--bg-clr2);
+}
+
+.container{
+    margin: 30px 0;
+    background: var(--bg-clr3);
+    width: calc(100vw - 65vw);
+    max-width: 100vw;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    color: var(--txt-clr);
+}
+
+.form-tittle{
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.form-tittle h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 34px;
+}
+
+.form{
+    padding: 20px 40px;
+}
+
+.form-box{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-box label{
+    display: inline-block;
+    margin: 5px 0;
+} 
+.form-box input{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    padding: 8px;
+    background: var(--bg-clr);
+}
+.form-box input:focus{
+    outline: 0;
+    border: 3px solid rgb(20, 20, 20);
+}
+.form-box.success input{
+    border-color: rgb(28, 184, 28);
+}
+.form-box.error input{
+    border-color: rgb(244, 55, 34);
+}
+
+.form-box i{
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    visibility: hidden;
+}
+.form-box.success i.fa-circle-check{
+    color: rgb(28, 184, 28);
+    visibility: visible;
+}
+.form-box.error i.fa-circle-exclamation{
+    color: rgb(244, 55, 34);
+    visibility: visible;
+}
+.form-box small{
+    color:rgb(244, 55, 34);
+    position: absolute;
+    margin-bottom: 8px;
+    left: 0;
+    visibility: hidden;
+    
+}
+.form-box.error small{
+    visibility: visible;
+}
+
+.form .btn{
+    display: block;
+    padding: 10px 0;
+    margin: 20px auto;
+    text-transform: capitalize;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: var(--bg-clr2);
+}
+
+.btn:hover{
+    background-color:var(--bg-clr);
+}
